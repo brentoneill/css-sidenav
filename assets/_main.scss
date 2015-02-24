@@ -3,11 +3,19 @@
 body{
   margin:0;
   padding:0;
+
+  list-style-type:none;
+  font-family:'Roboto', sans-serif;
+  font-weight:100;
 }
 
 .page-content {
+  @include transition(all .5s ease);
   position:relative;
   z-index:0;
+  text-align:center;
+  width:50%;
+  margin:0 auto;
 }
 
 .toggle {
@@ -37,9 +45,6 @@ body{
   }
 
   li {
-    list-style-type:none;
-    font-family:'Roboto', sans-serif;
-    font-weight:100;
     text-transform:uppercase;
     opacity:.5;
     cursor:pointer;
@@ -55,11 +60,17 @@ body{
 #sidebartoggler {
   display:none;
   &:checked + .page-wrapper{
+
     .sidebar {
       left:0px;
     }
+
     .toggle {
       left:200px;
+    }
+    
+    .page-content{
+      padding-left:200px;
     }
   }
 }

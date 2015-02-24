@@ -1,11 +1,20 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100; }
 
 .page-content {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto; }
 
 .toggle {
   position: fixed;
@@ -42,9 +51,6 @@ body {
     margin: 0;
     padding: 0; }
   .sidebar li {
-    list-style-type: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 100;
     text-transform: uppercase;
     opacity: .5;
     cursor: pointer;
@@ -60,5 +66,7 @@ body {
     left: 0px; }
   #sidebartoggler:checked + .page-wrapper .toggle {
     left: 200px; }
+  #sidebartoggler:checked + .page-wrapper .page-content {
+    padding-left: 200px; }
 
 /*# sourceMappingURL=compiled.css.map */
